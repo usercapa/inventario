@@ -14,4 +14,19 @@ for = "/*.mjs"
 Content-Type = "text/javascript"
 Access-Control-Allow-Origin = "*"
 
-
+# Optional: Add CORS headers if needed
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+ 
+[[headers]]
+  for = "/*.mjs"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+ 
+# Optional: Configure redirects if needed
+[[redirects]]
+   from = "/*"
+   to = "/index.html"
+   status = 200
